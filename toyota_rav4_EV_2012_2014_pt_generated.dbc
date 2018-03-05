@@ -193,12 +193,13 @@ BO_ 1564 NEW_MSG_3: 8 XXX
  SG_ NEW_SIGNAL_1 : 57|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 1012 LIGHTS: 8 XXX
- SG_ NEW_SIGNAL_2 : 36|5@0+ (1,0) [0|31] "" XXX
- SG_ NEW_SIGNAL_1 : 16|1@0+ (1,0) [0|1] "" XXX
- SG_ NEW_SIGNAL_3 : 17|1@0+ (1,0) [0|1] "" XXX
  SG_ NEW_SIGNAL_4 : 18|1@0+ (1,0) [0|1] "" XXX
  SG_ NEW_SIGNAL_5 : 19|1@0+ (1,0) [0|1] "" XXX
  SG_ NEW_SIGNAL_6 : 20|1@0+ (1,0) [0|1] "" XXX
+ SG_ NEW_SIGNAL_2 : 36|1@0+ (1,0) [0|1] "" XXX
+ SG_ NEW_SIGNAL_7 : 35|1@0+ (1,0) [0|1] "" XXX
+ SG_ NEW_SIGNAL_1 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 39|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 944 NEW_MSG_4: 8 XXX
  SG_ NEW_SIGNAL_1 : 8|8@1+ (1,0) [0|255] "" XXX
