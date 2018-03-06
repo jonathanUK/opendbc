@@ -102,8 +102,8 @@ BO_ 1556 STEERING_LEVERS: 8 XXX
 
 BO_ 37 STEER_ANGLE_SENSOR: 8 XXX
  SG_ STEER_ANGLE : 3|12@0- (1.5,0) [-500|500] "deg" XXX
- SG_ STEER_FRACTION : 39|4@0- (0.1,0) [-0.7|0.7] "deg" XXX
  SG_ STEER_RATE : 35|12@0- (1,0) [-2000|2000] "deg/s" XXX
+ SG_ STEER_FRACTION : 39|4@0- (0.1,0) [-0.7|0.7] "deg" XXX
 
 BO_ 467 PCM_CRUISE_2: 8 XXX
  SG_ MAIN_ON : 15|1@0+ (1,0) [0|1] "" XXX
@@ -202,15 +202,52 @@ BO_ 1012 LIGHTS: 8 XXX
  SG_ NEW_SIGNAL_7 : 35|1@0+ (1,0) [0|1] "" XXX
  SG_ NEW_SIGNAL_1 : 23|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_3 : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_8 : 15|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 944 NEW_MSG_4: 8 XXX
  SG_ NEW_SIGNAL_1 : 8|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 950 NEW_MSG_5: 8 XXX
  SG_ NEW_SIGNAL_2 : 47|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_1 : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 63|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1055 NEW_MSG_6: 8 XXX
  SG_ NEW_SIGNAL_1 : 63|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 800 NEW_MSG_1: 8 XXX
+ SG_ NEW_SIGNAL_1 : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 55|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 865 NEW_MSG_7: 8 XXX
+ SG_ NEW_SIGNAL_1 : 15|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 583 NEW_MSG_8: 8 XXX
+ SG_ NEW_SIGNAL_1 : 7|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 15|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 1183 NEW_MSG_9: 8 XXX
+ SG_ NEW_SIGNAL_1 : 7|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 1192 NEW_MSG_10: 8 XXX
+ SG_ NEW_SIGNAL_1 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 7|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 31|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_4 : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_5 : 55|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 1552 NEW_MSG_11: 8 XXX
+ SG_ NEW_SIGNAL_1 : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 47|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_4 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 15|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 881 NEW_MSG_12: 8 XXX
+ SG_ NEW_SIGNAL_4 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_1 : 55|16@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_2 : 47|8@0+ (1,0) [0|255] "" XXX
 
 
 
@@ -220,8 +257,8 @@ CM_ SG_ 36 YAW_RATE "verify";
 CM_ SG_ 36 STEERING_TORQUE "does not seem the steer torque, tbd";
 CM_ SG_ 466 ACCEL_NET "net acceleration produced by the system, given ACCEL_CMD, road grade and other factors";
 CM_ SG_ 614 ANGLE "set to measured angle when ipas control isn't active";
-CM_ SG_ 37 STEER_FRACTION "1/15th of the signal STEER_ANGLE, which is 1.5 deg; note that 0x8 is never set";
 CM_ SG_ 37 STEER_RATE "factor is tbd";
+CM_ SG_ 37 STEER_FRACTION "1/15th of the signal STEER_ANGLE, which is 1.5 deg; note that 0x8 is never set";
 CM_ SG_ 467 LOW_SPEED_LOCKOUT "in low speed lockout, system would always disengage below 28mph";
 CM_ SG_ 467 SET_SPEED "43 kph are shown as 28mph, so conversion isnt perfect";
 CM_ SG_ 921 UI_SET_SPEED "set speed shown in UI with user set unit";
