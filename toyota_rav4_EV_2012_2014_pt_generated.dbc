@@ -68,8 +68,8 @@ BO_ 552 ACCELEROMETER: 8 XXX
  SG_ ACCEL_X : 6|15@0- (0.001,0) [-20|20] "m/s2" XXX
 
 BO_ 560 BRAKE_MODULE2: 7 XXX
- SG_ BRAKE_PRESSED : 26|1@0+ (1,0) [0|1] "" XXX
- SG_ NEW_SIGNAL_1 : 50|1@0+ (1,0) [0|1] "" XXX
+ SG_ BRAKE_PRESSED_2 : 50|1@0+ (1,0) [0|1] "" XXX
+ SG_ BRAKE_PRESSED_1 : 26|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 614 STEERING_IPAS: 8 IPAS
  SG_ STATE : 7|4@0+ (1,0) [0|15] "" XXX
@@ -219,7 +219,6 @@ CM_ SG_ 36 ACCEL_Y "unit is tbd";
 CM_ SG_ 36 YAW_RATE "verify";
 CM_ SG_ 36 STEERING_TORQUE "does not seem the steer torque, tbd";
 CM_ SG_ 466 ACCEL_NET "net acceleration produced by the system, given ACCEL_CMD, road grade and other factors";
-CM_ SG_ 560 BRAKE_PRESSED "another brake pressed?";
 CM_ SG_ 614 ANGLE "set to measured angle when ipas control isn't active";
 CM_ SG_ 37 STEER_FRACTION "1/15th of the signal STEER_ANGLE, which is 1.5 deg; note that 0x8 is never set";
 CM_ SG_ 37 STEER_RATE "factor is tbd";
