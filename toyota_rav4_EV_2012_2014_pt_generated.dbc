@@ -40,6 +40,8 @@ BO_ 36 KINEMATICS: 8 XXX
  SG_ YAW_RATE : 1|10@0+ (1,-512) [0|65535] "" XXX
  SG_ STEERING_TORQUE : 17|10@0+ (1,-512) [0|65535] "" XXX
  SG_ ACCEL_Y : 33|10@0+ (1,-512) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_1 : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 63|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 166 BRAKE: 8 XXX
  SG_ BRAKE_AMOUNT : 7|8@0+ (1,0) [0|255] "" XXX
@@ -189,9 +191,9 @@ BO_ 548 BRAKE_MODULE: 8 XXX
  SG_ BRAKING_APPLICATION : 5|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 580 NEW_MSG_2: 8 XXX
- SG_ NEW_SIGNAL_1 : 39|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_2 : 47|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_3 : 55|16@0+ (1,0) [0|2047] "" XXX
+ SG_ NEW_SIGNAL_3 : 56|8@1+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_1 : 47|8@0+ (1,0) [0|255] "" XXX
+ SG_ MOTOR_POWER_TBC : 55|8@0+ (1,0) [0|255] "hp" XXX
 
 BO_ 1564 NEW_MSG_3: 8 XXX
  SG_ NEW_SIGNAL_1 : 57|1@0+ (1,0) [0|1] "" XXX
@@ -222,29 +224,29 @@ BO_ 800 NEW_MSG_1: 8 XXX
  SG_ NEW_SIGNAL_2 : 55|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 865 NEW_MSG_7: 8 XXX
- SG_ NEW_SIGNAL_1 : 15|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ MOTOR_POWER_TBC : 23|8@0+ (1,0) [0|255] "hp" XXX
+ SG_ SPEED_TBC : 15|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 583 NEW_MSG_8: 8 XXX
  SG_ NEW_SIGNAL_1 : 7|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_2 : 15|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1183 NEW_MSG_9: 8 XXX
- SG_ NEW_SIGNAL_1 : 7|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ SPEED_TBC : 7|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1192 NEW_MSG_10: 8 XXX
- SG_ NEW_SIGNAL_1 : 23|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_2 : 7|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_3 : 31|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_4 : 39|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_5 : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ MOTOR_POWER_TBC : 23|8@0+ (1,0) [0|255] "hp" XXX
 
 BO_ 1552 NEW_MSG_11: 8 XXX
  SG_ NEW_SIGNAL_1 : 55|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_2 : 47|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_4 : 23|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_3 : 15|1@0+ (1,0) [0|1] "" XXX
+ SG_ POWER_TO_MOTOR_TBC : 15|1@0+ (1,0) [0|1] "" XXX
+ SG_ SPEED_TBC : 23|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 881 NEW_MSG_12: 8 XXX
  SG_ NEW_SIGNAL_4 : 23|8@0+ (1,0) [0|255] "" XXX
@@ -253,6 +255,8 @@ BO_ 881 NEW_MSG_12: 8 XXX
 
 BO_ 1181 NEW_MSG_13: 8 XXX
  SG_ NEW_SIGNAL_1 : 37|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 295 NEW_MSG_14: 8 XXX
 
 
 
@@ -274,6 +278,7 @@ CM_ SG_ 581 GAS_PEDAL "it seems slightly filtered";
 CM_ SG_ 176 WHEEL_SPEED_2 "Wheel position unknown";
 CM_ SG_ 176 WHEEL_SPEED_1 "Wheel positon unknown";
 CM_ SG_ 178 WHEEL_SPEED_3 "";
+CM_ SG_ 865 SPEED_TBC "Speed is 20kph below vehicle speed";
 VAL_ 466 CRUISE_STATE 8 "active" 7 "standstill" 1 "off" ;
 VAL_ 614 STATE 3 "enabled" 1 "disabled" ;
 VAL_ 614 DIRECTION_CMD 3 "right" 2 "center" 1 "left" ;
